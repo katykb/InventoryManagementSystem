@@ -2,6 +2,8 @@ const {Model,Datatypes}=require('sequelize');
 const { User } = require('.');
 const sequelize=require('../config/connection');
 
+class User extends Model{}
+
 User.init(
     {
         category:{
