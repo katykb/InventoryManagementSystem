@@ -5,6 +5,4 @@ const Category = require('./Category');
 Product.belongsTo(Category,{foreignKey:"category_id"});
 Category.hasMany(Product ,{foreignKey:'category_id'});
 
-module.exports={Category};
-module.exports={Product}
-module.exports={User};
+module.exports={Category, Product, User};

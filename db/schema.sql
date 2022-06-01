@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS recordShop_db
-CREATE DATABASE recordShop_db
+DROP DATABASE IF EXISTS recordShop_db;
+CREATE DATABASE recordShop_db;
