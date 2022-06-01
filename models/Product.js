@@ -19,9 +19,9 @@ Product.init(
             type: DataTypes.DECIMAL,
             allowNull: false,
         },
-        wholesale_price:{
-            type:DataTypes.DECIMAL,
-            allowNull:false,
+        wholesale_price: {
+            type: DataTypes.DECIMAL,
+            allowNull: false,
         },
         stock: {
             type: DataTypes.INTEGER,
@@ -33,20 +33,19 @@ Product.init(
         category_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'Category',
+                model: 'category',
                 key: 'id'
             }
         },
-
+    },
+    {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: "product",
 
-
-
     }
 );
 
-module.exports={Product}
+module.exports =  Product

@@ -11,7 +11,7 @@ Category.init(
          primaryKey:true,
          autoIncrement:true,   
         },
-        genres:{
+        genre:{
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -25,4 +25,4 @@ Category.init(
       }
 );
 
-module.exports={Category};
+module.exports= Category;
