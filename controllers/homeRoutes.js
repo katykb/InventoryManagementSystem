@@ -3,3 +3,8 @@
 
 const router = require('express').Router();
 module.exports = router
+
+//Miniature version of routes set up
+//logging in 
+//making new product 
+//handlebars page 

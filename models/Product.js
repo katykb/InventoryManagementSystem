@@ -15,7 +15,7 @@ Product.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        price: {
+        retail_price: {
             type: DataTypes.DECIMAL,
             allowNull: false,
         },
