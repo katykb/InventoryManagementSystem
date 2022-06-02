@@ -1,12 +1,15 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+
+//added console logs to show errors in the terminal
 router.post('/login', async (req, res) => {
   try {
     
     const userData = await User.findOne({ where: { username: req.body.username } });
 
     if (!userData) {
+      console.log('incorrect username');
       res
         .status(400)
         .json({ message: 'Incorrect username or password, please try again' });
@@ -17,6 +20,7 @@ router.post('/login', async (req, res) => {
     const validPassword = await userData.checkPassword(req.body.password);
 
     if (!validPassword) {
+      console.log('incorrect password');
       res
         .status(400)
         .json({ message: 'Incorrect username or password, please try again' });
@@ -32,6 +36,7 @@ router.post('/login', async (req, res) => {
     });
 
   } catch (err) {
+    console.log("database error", err);
     res.status(400).json(err);
   }
 });
