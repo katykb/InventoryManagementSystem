@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const router = require('../models');
+const { User } = require('../models');
 
 router.get('/' , async (req, res) => {
     try {
-        const userData = await router.User.findAll({
+        const userData = await User.findAll({
             attributes: { exclude: ['password'] },
             order: [['name', 'ASC']], 
         });
@@ -20,7 +20,7 @@ router.get('/' , async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-    if (res.session.loggeg_in) {
+    if (req.session.loggeg_in) {
         res.redirect('/');
         return;
     }
@@ -28,4 +28,4 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-module.exports = router
+module.exports = router;
