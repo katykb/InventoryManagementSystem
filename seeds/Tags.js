@@ -1,5 +1,6 @@
 const { Tag } = require('../models');
 
+//should be media type?
 const tagData = [
 {
     tag_name : 'Classic Rock'
