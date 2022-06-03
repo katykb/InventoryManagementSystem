@@ -6,6 +6,11 @@
     Add inventory or create a new inventory item
   </h3>
 </section>
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{username}}!</h2>
+  </div>
+</div>
 <form class="form inventory-entry-form">
   <div class="form-group">
     <label for="mediaType">Media:</label>
@@ -32,6 +37,16 @@
     <button class="btn btn-primary" type="submit">Enter New Item</button>
   </div>
 </form>
+<br />
+<br />
+<section>
+  <h1 class="title">
+    Inventory On Hands
+  </h1>
+  <h3 class="subtitle">
+    Check what is currently in the store
+  </h3>
+</section>
 <div class="container">
   <div class="columns is-mobile">
     <div class="column">
@@ -43,14 +58,17 @@
               <label class="label">Select Product</label>
               <div class="select">
                 <select id="select">
-                  <option>All Products</option>
-                  {{#each products}}
-                    <option id="{{id}}">{{name}}</option>
+                   
+                       <select id="select"><option>All Products</option></select>
+                  {{#each categories}}
+                      <option>{{genre}}</option>
                   {{/each}}
+                
+                    </select>
+                    <option id="{{id}}">{{name}}</option>
                 </select>
               </div>
             </div>
-            <br />
 
           </div>
         </div>
@@ -59,6 +77,10 @@
     </div>
   </div>
 </div>
+<div>
+  <button class="btn btn-primary" type="submit">Check store inventory</button>
+</div>
+
 <div class="container">
   <div class="columns is-mobile">
     <div class="column">
@@ -70,10 +92,12 @@
               {{#each products}}
                 <li>
                   <label class="label">{{name}}</label>
-                  <p>Quantity: {{quantity}}</p>
-                  <p>Cost: {{cost}}</p>
-                  <p>Description: {{description}}</p>
-                  <p>Category: {{category}}</p>
+                  <p>Product Name: {{product_name}}</p>
+                  <p>Genre: {{tag_name}}</p>
+                  <p>Whole Sale Cost: {{wholesale_price}}</p>
+                  <p>Retail Price: {{price}}</p>
+                  <p>Stock: {{stock}}</p>
+
                 </li>
               {{/each}}
             </ul>
@@ -85,7 +109,9 @@
     </div>
   </div>
 </div>
+<div>
+  <button class="btn btn-primary" type="submit">Check product list</button>
+</div>
 
 <script src="/js/inventory.js"></script>
-
-<script src="/js/inventory.js"></script>
+<script src="/js/login.js"></script>

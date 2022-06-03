@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
     //     order: [['username', 'ASC']],
     // });
 
-    // const users = userData.map((project) => project.get({ plain: true } ));/
+    // const users = userData.map((project) => project.get({ plain: true } ));
 
     if (req.session.logged_in) res.render("homepage");
     else res.render("login");
