@@ -4,10 +4,12 @@ const express = require("express");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
 const inventoryRoutes = require("./controllers/api/inventoryRoutes");
-// const homeRoutes = require('./controllers/homeRoutes')
-// const userRoutes = require('./controllers/api/userRoutes');
+// const homeRoutes = require('./controllers/homeRoutes');
+// const userRoutes = rquire('.controllers/api/userRoutes');
 const sequelize = require("./config/connection");
 const controllers = require('./controllers');
+
+
 
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
@@ -30,11 +32,13 @@ app.set("view engine", "handlebars");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 //removed the path join __dirname
+
 app.use(express.static("public"));
 app.use(controllers)
 // app.use(homeRoutes);
 // app.use(userRoutes);
-//app.use("/api/inventory", inventoryRoutes);
+// app.use("/api/inventory", inventoryRoutes);
+
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Now Listening ${PORT}`));
