@@ -25,12 +25,13 @@ Product.init(
             type: DataTypes.DECIMAL,
             allowNull: false,
         },
-        stock: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                isNumeric: true
-            }
+        //added media type here
+        media_type: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            // validate: {
+            //     isNumeric: true
+            // }
         },
         category_id: {
             type: DataTypes.INTEGER,

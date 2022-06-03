@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const { User } = require("../models");
 
-
 //if user is already logged in we didn't need lines 8-13
 router.get("/", async (req, res) => {
   try {
@@ -19,8 +18,20 @@ router.get("/", async (req, res) => {
   }
 });
 
+//added to get the inventory front end to run
+//console log to make sure inventory get is working
+router.get("/inventory", (req, res) => {
+  console.log("Inventory GET")
+  if (req.session.logged_in) {
+    console.log(req.session)
+    res.render("inventory",{logged_in:true,username:req.session.username});
+  }else{
+  res.redirect("/");
+  }
+});
+
 router.get("/login", (req, res) => {
-  if (req.session.loggeg_in) {
+  if (req.session.logged_in) {
     res.redirect("/");
     return;
   }

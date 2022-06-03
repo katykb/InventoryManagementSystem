@@ -1,28 +1,26 @@
-const router = require('express').Router();
-const { Product } = require('../../models');
+const router = require("express").Router();
+const { Product } = require("../../models");
 
-router.post('/', async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const newProduct = await Product.create({
       ...req.body,
       user_id: req.session.user_id,
     });
-
+    console.log(newProduct);
     res.status(200).json(newProduct);
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
 
 router.get("/", async (req, res) => {
   try {
+  } catch (err) {}
+});
 
-  } catch(err){
-    
-  }
-})
-
-router.delete('/:id', async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
     const productData = await Product.destroy({
       where: {
@@ -32,7 +30,7 @@ router.delete('/:id', async (req, res) => {
     });
 
     if (!productData) {
-      res.status(404).json({ message: 'No product found with this id!' });
+      res.status(404).json({ message: "No product found with this id!" });
       return;
     }
 
