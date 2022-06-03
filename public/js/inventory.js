@@ -20,3 +20,5 @@ const inventoryFormHandler = async (event) => {
 document
   .querySelector(".inventory-entry-form")
   .addEventListener("submit", inventoryFormHandler);
+
+  //Add route to push inventory to database
