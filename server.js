@@ -4,6 +4,7 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const inventoryRoutes = require('./controllers/api/inventoryRoutes');
+const homeRoutes = require('./controllers/homeRoutes')
 
 
 const sequelize = require('./config/connection');
@@ -33,7 +34,9 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 //removed the path join __dirname
+
 app.use(express.static('public'));
+app.use(homeRoutes);
 
 app.use("/api/inventory", inventoryRoutes);
 
