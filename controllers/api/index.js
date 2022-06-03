@@ -1,5 +1,8 @@
-// Reference: Week 14, Activity 24
-// /controllers/api
-
 const router = require('express').Router();
-module.exports = router
+const userRoutes = require('./userRoutes');
+
+router.use('/users', userRoutes);
+
+
+module.exports = router;
+
