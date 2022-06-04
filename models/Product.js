@@ -20,7 +20,14 @@ Product.init(
         product_name: {
             type: DataTypes.STRING,
             allowNull: false,
+            
         },
+
+        product_artist: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+
         retail_price: {
             type: DataTypes.DECIMAL,
             allowNull: false,
