@@ -7,6 +7,7 @@ const productData = [
         wholesale_price : 11.99,
         stock : 300,
         category_id : 1,
+        media_type: 'Album',
         
     }, 
     {
@@ -15,6 +16,7 @@ const productData = [
         wholesale_price : 15.99,
         stock : 200,
         category_id : 1,
+        media_type: 'CD',
         
 
     }, 
@@ -24,6 +26,7 @@ const productData = [
         wholesale_price : 12.99,
         stock : 250,
         category_id : 1,
+        media_type: 'Album',
         
     },
     {
@@ -32,6 +35,7 @@ const productData = [
         wholesale_price : 9.99,
         stock : 500,
         category_id : 2,
+        media_type: 'Tape',
         
     }
 ]
