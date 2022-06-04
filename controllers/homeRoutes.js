@@ -33,6 +33,17 @@ router.get("/enterInventory", (req, res) => {
   }
 });
 
+
+router.get('/inventory/:category_id', async (req, res) => {
+  const category_id = req.params.category_id;
+  const categoryProducts = await Product.findAll({ where: { category_id } })
+  const matchingProducts = categoryProducts.map(product => {
+    return product.get({ plain: true })
+  })
+  console.log(matchingProducts);
+  res.render("showProducts", { matchingProducts })
+})
+
 router.get("/checkInventory", (req, res) => {
   console.log("Inventory GET");
   if (req.session.logged_in) {
@@ -56,16 +67,6 @@ router.get("/inventory/genre/:category_id", async (req, res) => {
   res.render("showProducts", { matchingProducts });
 });
 
-router.get("/inventory/media/:media_type", async (req, res) => {
-  const media_type = req.params.media_type;
-  const mediaProducts = await Product.findAll({ where: { media_type } });
-  const matchingProducts = mediaProducts.map((product) => {
-    return product.get({ plain: true });
-  });
-  console.log(matchingProducts);
-  res.render("showProducts", { matchingProducts });
-});
-
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/");
@@ -76,3 +77,13 @@ router.get("/login", (req, res) => {
 });
 
 module.exports = router;
+
+// router.get('/inventory/:product_name', async (req, res) => {
+//   const product_name = req.params.product_name;
+//   const nameProduct = await Product.findAll({ where: { product_name } })
+//   const matchingProducts = nameProducts.map(product => {
+//     return product.get({ plain: true })
+//   })
+//   console.log(matchingProducts);
+//   res.render("showProducts", { matchingProducts })
+// })

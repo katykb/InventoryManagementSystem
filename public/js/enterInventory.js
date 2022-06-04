@@ -29,6 +29,22 @@ const inventoryFormHandler = async (event) => {
 };
 
 
+<<<<<<< HEAD:public/js/inventory.js
+  const media_type = document.querySelector("#mediaType-inventory-levels").value.trim();
+  console.log(media_type);
+  const genre_type = document.querySelector("#genreType-inventory-levels").value.trim();
+  window.location.href= `/inventory/${genre_type}`
+
+  // const getResponse = await fetch("/api/inventory/", {
+  //   method: "GET",
+  //   body: JSON.stringify({
+
+  //   })
+  // })
+
+}
+=======
+>>>>>>> 0135293f230b173bd12b17920673dca04ad50457:public/js/enterInventory.js
 
 document
   .querySelector(".inventory-entry-form")

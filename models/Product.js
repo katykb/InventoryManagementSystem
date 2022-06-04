@@ -29,14 +29,7 @@ Product.init(
             type: DataTypes.DECIMAL,
             allowNull: false,
         },
-        //added media type here
-        media_type: {
-            type: DataTypes.STRING,
-            allowNull: true,
-            // validate: {
-            //     isNumeric: true
-            // }
-        },
+        // this is the genre
         category_id: {
             type: DataTypes.INTEGER,
             references: {
