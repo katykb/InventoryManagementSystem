@@ -24,20 +24,20 @@ router.get("/inventory", (req, res) => {
   console.log("Inventory GET")
   if (req.session.logged_in) {
     console.log(req.session)
-    res.render("inventory",{logged_in:true,username:req.session.username});
-  }else{
-  res.redirect("/");
+    res.render("inventory", { logged_in: true, username: req.session.username });
+  } else {
+    res.redirect("/");
   }
 });
 
-router.get('/inventory/:category_id',async (req, res) => {
+router.get('/inventory/:category_id', async (req, res) => {
   const category_id = req.params.category_id;
- const categoryProducts = await Product.findAll({where: { category_id }})
-const matchingProducts =  categoryProducts.map(product => {
-   return product.get({plain: true})
- })
- console.log(matchingProducts);
- res.render("showProducts", { matchingProducts })
+  const categoryProducts = await Product.findAll({ where: { category_id } })
+  const matchingProducts = categoryProducts.map(product => {
+    return product.get({ plain: true })
+  })
+  console.log(matchingProducts);
+  res.render("showProducts", { matchingProducts })
 })
 
 router.get("/login", (req, res) => {
@@ -50,3 +50,13 @@ router.get("/login", (req, res) => {
 });
 
 module.exports = router;
+
+// router.get('/inventory/:product_name', async (req, res) => {
+//   const product_name = req.params.product_name;
+//   const nameProduct = await Product.findAll({ where: { product_name } })
+//   const matchingProducts = nameProducts.map(product => {
+//     return product.get({ plain: true })
+//   })
+//   console.log(matchingProducts);
+//   res.render("showProducts", { matchingProducts })
+// })

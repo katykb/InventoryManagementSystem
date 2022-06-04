@@ -30,8 +30,8 @@ const inventoryFormHandler = async (event) => {
 const levelFormHandler = async (event) => {
   event.preventDefault();
 
-  // const media_type = document.querySelector("#mediaType-inventory-levels").value.trim();
-  // console.log(media_type);
+  const media_type = document.querySelector("#mediaType-inventory-levels").value.trim();
+  console.log(media_type);
   const genre_type = document.querySelector("#genreType-inventory-levels").value.trim();
   window.location.href= `/inventory/${genre_type}`
 
