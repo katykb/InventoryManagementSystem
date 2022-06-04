@@ -1,0 +1,107 @@
+body{
+  position: relative;
+
+}
+
+
+.row {
+  margin-top: 45px;
+}
+
+.col-md-4 {
+  margin: auto;
+  height: 300px;
+  background-color: black;
+  opacity: .7;
+  position: relative;
+  border-radius: 8px;
+  padding:50px;
+}
+
+.fa-stack.fa-4x {
+  padding-bottom: 300px;
+}
+
+.fa.fa-circle.fa-stack-2x {
+  padding-top: 100px;
+}
+
+.section-subheading {
+  padding-top: 60px;
+}
+
+#mainNav {
+  background-color: black;
+  opacity: .8;
+}
+
+h3 {
+  color: red;
+}
+
+h2 {
+  margin-top: 100px;
+  color: white;
+}
+
+.fa-stack.fa-4x {
+  margin-top: -200px;
+}
+
+h4 {
+  color: lightblue;
+  opacity: 1;
+  bottom: 322px;
+}
+
+.navbar-brand {
+  margin-left: -60px;
+}
+
+
+#inventory {
+  color: #96DED1;
+}
+
+#sales {
+  color: #96DED1;
+}
+
+a {
+  color: black;
+}
+
+.section-heading {
+  color: white;
+}
+
+.fas.fa-money-bill-wave.money {
+  position: absolute;
+  top: 160px;
+  right: 40%;
+  color:white;
+}
+
+.fas.fa-user.fa-4x.user {
+  /*padding: 26px;*/
+  position: absolute;
+  top: 153px;
+  left: 44%;
+  color:white;
+}
+
+.fas.fa-store.fa-4x.inventory {
+  position: absolute;
+  right: 40%;
+  bottom: 73px;
+  color:white;
+}
+
+#user {
+  color: #96DED1;
+}
+
+#menuBox {
+  border:2px solid white;
+  border-radius: 8px;
+}
