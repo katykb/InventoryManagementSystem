@@ -5,7 +5,7 @@ const inventoryFormHandler = async (event) => {
   const media_type = document
     .querySelector("#mediaType-inventory")
     .value.trim();
-  const category_id = document.querySelector("#genre-inventory").value.trim();
+  const genre_type = document.querySelector("#genre-inventory").value.trim();
   const product_name = document.querySelector("#title-inventory").value.trim();
   const wholesale_price = document
     .querySelector("#wholesalePrice-inventory")
@@ -13,12 +13,13 @@ const inventoryFormHandler = async (event) => {
   const retail_price = document
     .querySelector("#retailPrice-inventory")
     .value.trim();
+    
 
   const response = await fetch("/api/inventory", {
     method: "POST",
     body: JSON.stringify({
       media_type,
-      category_id,
+      genre_type,
       product_name,
       wholesale_price,
       retail_price,
@@ -27,9 +28,8 @@ const inventoryFormHandler = async (event) => {
   });
 };
 
-const levelFormHandler = async (event) => {
-  event.preventDefault();
 
+<<<<<<< HEAD:public/js/inventory.js
   const media_type = document.querySelector("#mediaType-inventory-levels").value.trim();
   console.log(media_type);
   const genre_type = document.querySelector("#genreType-inventory-levels").value.trim();
@@ -43,13 +43,13 @@ const levelFormHandler = async (event) => {
   // })
 
 }
+=======
+>>>>>>> 0135293f230b173bd12b17920673dca04ad50457:public/js/enterInventory.js
 
 document
   .querySelector(".inventory-entry-form")
   .addEventListener("submit", inventoryFormHandler);
 
-document
-  .querySelector(".levels-form-group")
-  .addEventListener("submit", levelFormHandler);
+
 
 //Add route to push inventory to database

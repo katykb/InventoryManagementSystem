@@ -1,0 +1,39 @@
+<section>
+  <h1 class="title">
+    Inventory On Hands
+    {{logged_in}}
+  </h1>
+  <h3 class="subtitle">
+    Check what is currently in the store
+  </h3>
+</section>
+
+<form class="media-form-group">
+  <label for="check-levels">Select Media Type:</label>
+  <select class="form-input" id="mediaType-inventory-levels">
+    <option value="Album">Album</option>
+    <option value="Tape">Tape</option>
+    <option value="CD">CD</option>
+  </select>
+  <div>
+    <button class="btn btn-primary" type="submit">Search by Media Type</button>
+  </div>
+</form>
+
+
+<form class="genre-form-group">
+  <label for="check-levles"> Select Genre Type:></label>
+  <select class="form-input" id="genreType-inventory-levels">
+    <option value="2"> Rap</option>
+    <option value="4">Country</option>
+    <option value="3">Rock</option>
+    <option value="1">Classic Rock</option>
+    <option value="5">Alternative</option>
+  </select>
+
+  <div>
+    <button class="btn btn-primary" type="submit">Search by Genre</button>
+  </div>
+</form>
+
+<script src="/js/checkInventory.js"></script>
