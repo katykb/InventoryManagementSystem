@@ -49,4 +49,11 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+router.get("/register", (req, res) => {
+  if (!req.session.logged_in) {
+    res.redirect("/login")
+  }
+  res.render("registerEmployee")
+})
+
 module.exports = router;

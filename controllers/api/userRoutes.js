@@ -61,6 +61,8 @@ router.post("/",  async (req, res) => {
    req.session.logged_in = true;
    
    res.json({ user: newUser, message: 'New employee created' });
+   console.log(newUser);
+  //  res.redirect("/api/users/register")
  });
  
   } 

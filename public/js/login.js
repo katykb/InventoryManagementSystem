@@ -22,35 +22,35 @@ const loginFormHandler = async (event) => {
   }
 };
 
-const signupFormHandler = async (event) => {
-  event.preventDefault();
+// const signupFormHandler = async (event) => {
+//   event.preventDefault();
 
-  const employeeName = document.querySelector("#name-signup").value.trim();
-  const newUsername = document.querySelector("#username-signup").value.trim();
-  const newPassword = document.querySelector("#password-signup").value.trim();
-  const restrictions = document
-    .querySelector("#restrictions-signup")
-    .value.trim();
+//   const employeeName = document.querySelector("#name-signup").value.trim();
+//   const newUsername = document.querySelector("#username-signup").value.trim();
+//   const newPassword = document.querySelector("#password-signup").value.trim();
+//   const restrictions = document
+//     .querySelector("#restrictions-signup")
+//     .value.trim();
 
-  if (employeeName && newUsername && getNewLibraryCopy && restrictions) {
-    const response = await fetch("/api/users/", {
-      method: "POST",
-      body: JSON.stringify({
-        employeeName,
-        newUsername,
-        newPassword,
-        restrictions,
-      }),
-      headers: { "Content-Type": "application/json" },
-    });
+//   if (employeeName && newUsername && getNewLibraryCopy && restrictions) {
+//     const response = await fetch("/api/users/", {
+//       method: "POST",
+//       body: JSON.stringify({
+//         employeeName,
+//         newUsername,
+//         newPassword,
+//         restrictions,
+//       }),
+//       headers: { "Content-Type": "application/json" },
+//     });
 
-    if (response.ok) {
-      document.location.replace("/");
-    } else {
-      alert("Failed to sign up");
-    }
-  }
-};
+//     if (response.ok) {
+//       document.location.replace("/");
+//     } else {
+//       alert("Failed to sign up");
+//     }
+//   }
+// };
 
 document
   .querySelector(".login-form")
