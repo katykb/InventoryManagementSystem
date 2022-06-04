@@ -2,40 +2,42 @@ const { Product } = require('../models');
 
 const productData = [
     {
-        product_name : 'Pink Floyd: The Wall',
-        retail_price : 22.99,
-        wholesale_price : 11.99,
-        stock : 300,
-        category_id : 1,
-        media_type: 'Album'
-        
-    }, 
-    {
-        product_name : 'Pink Floyd: Dark Side of the Moon',
-        retail_price : 30.99,
-        wholesale_price : 15.99,
-        stock : 200,
-        category_id : 1,
+        product_name: 'The Wall',
+        product_artist: 'Pink Floyd',
+        media_type: 'Album',
+        stock: 200,
+        category_id: 1,
         media_type: 'CD'
-        
 
-    }, 
-    {
-        product_name : 'Guns N Roses: Appetite for Destruction',
-        retail_price : 23.99,
-        wholesale_price : 12.99,
-        stock : 250,
-        category_id : 1,
-        media_type : 'Album'
     },
     {
-        product_name : 'Dr. Dre: The Chronic',
-        retail_price : 18.99,
-        wholesale_price : 9.99,
-        stock : 500,
-        category_id : 2,
-        media_type : 'CD'
-        
+        product_name: 'Dark Side of the Moon',
+        product_artist: 'Pink Floyd',
+        retail_price: 30.99,
+        wholesale_price: 15.99,
+        stock: 200,
+        category_id: 1,
+        media_type: 'CD'
+
+
+    },
+    {
+        product_name: 'Appetite for Destruction',
+        product_artist: 'Guns N Roses',
+        retail_price: 23.99,
+        wholesale_price: 12.99,
+        stock: 250,
+        category_id: 1,
+        media_type: 'Album'
+    },
+    {
+        product_name: 'The Chronic',
+        product_artist: 'Dr. Dr',
+        retail_price: 18.99,
+        wholesale_price: 9.99,
+        stock: 500,
+        category_id: 2,
+        media_type: 'CD'
     }
 ]
 
