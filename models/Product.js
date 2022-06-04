@@ -11,7 +11,11 @@ Product.init(
             primaryKey: true,
             autoIncrement: true,
         },
-   
+
+        media_type: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
 
         product_name: {
             type: DataTypes.STRING,
@@ -51,4 +55,4 @@ Product.init(
     }
 );
 
-module.exports =  Product
+module.exports = Product

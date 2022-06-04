@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User } = require("../models");
+const { User, Product } = require("../models");
 
 //if user is already logged in we didn't need lines 8-13
 router.get("/", async (req, res) => {
@@ -29,6 +29,16 @@ router.get("/inventory", (req, res) => {
   res.redirect("/");
   }
 });
+
+router.get('/inventory/:category_id',async (req, res) => {
+  const category_id = req.params.category_id;
+ const categoryProducts = await Product.findAll({where: { category_id }})
+const matchingProducts =  categoryProducts.map(product => {
+   return product.get({plain: true})
+ })
+ console.log(matchingProducts);
+ res.render("showProducts", { matchingProducts })
+})
 
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {

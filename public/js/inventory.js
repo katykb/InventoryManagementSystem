@@ -27,8 +27,29 @@ const inventoryFormHandler = async (event) => {
   });
 };
 
+const levelFormHandler = async (event) => {
+  event.preventDefault();
+
+  // const media_type = document.querySelector("#mediaType-inventory-levels").value.trim();
+  // console.log(media_type);
+  const genre_type = document.querySelector("#genreType-inventory-levels").value.trim();
+  window.location.href= `/inventory/${genre_type}`
+
+  // const getResponse = await fetch("/api/inventory/", {
+  //   method: "GET",
+  //   body: JSON.stringify({
+
+  //   })
+  // })
+
+}
+
 document
   .querySelector(".inventory-entry-form")
   .addEventListener("submit", inventoryFormHandler);
+
+document
+  .querySelector(".levels-form-group")
+  .addEventListener("submit", levelFormHandler);
 
 //Add route to push inventory to database
