@@ -1,7 +1,20 @@
-{{!-- dashboard page --}}
-{{!-- links to inventory and sales --}}
+{{! dashboard page }}
+{{! links to inventory and sales }}
 <p> you are now logged in</p>
 <p>What would you like to do next</p>
-<p>Enter new inventory</p>
-<p>Check on hand inventory</p>
-<p>Register a new employee</p>
+<a href="/inventory"><button
+    class="btn btn-primary"
+    type="submit"
+    id="new-inventory-button"
+  >Enter New Inventory</button></a>
+<a href="/inventory"><button
+    class="btn btn-primary"
+    type="submit"
+    id="on-hand-button"
+  >Check On-Hand Levels</button></a>
+<a href="/registerEmployee"><button
+    class="btn btn-primary"
+    type="submit"
+    id="register-new-employee"
+  >Register a New Employee</button></a>
+

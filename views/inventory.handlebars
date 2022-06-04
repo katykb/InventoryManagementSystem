@@ -14,19 +14,27 @@
 <form class="form inventory-entry-form">
   <div class="form-group">
     <label for="mediaType">Media:</label>
-    <input class="form-input" type="text" id="mediaType-inventory" />
+    <select class="form-input" id="mediaType-inventory">
+      <option value="Album">Album</option>
+      <option value="Tape">Tape</option>
+      <option value="CD">CD</option>
+    </select>
   </div>
   <div class="form-group">
-    <label for="genre">Genre:</label>
-    <input class="form-input" type="password" id="genre-inventory" />
+    <label for="genreType">Genre:</label>
+    <select class="form-input" id="genre-inventory">
+      <option value="5">Rap</option>
+      <option value="4">Country</option>
+      <option value="3">Rock</option>
+    </select>
   </div>
   <div class="form-group">
-    <label for="title">Cost:</label>
+    <label for="title">Product Name:</label>
     <input class="form-input" type="text" id="title-inventory" />
   </div>
   <div class="form-group">
     <label for="costPrice">Cost:</label>
-    <input class="form-input" type="text" id="costPrice-inventory" />
+    <input class="form-input" type="text" id="wholesalePrice-inventory" />
   </div>
   <div class="form-group">
     <label for="retailPrice">Retail:</label>
@@ -42,76 +50,36 @@
 <section>
   <h1 class="title">
     Inventory On Hands
+    {{logged_in}}
   </h1>
   <h3 class="subtitle">
     Check what is currently in the store
   </h3>
 </section>
-<div class="container">
-  <div class="columns is-mobile">
-    <div class="column">
-      <div class="card">
-        <div class="card-content">
-          <div class="content">
-            <div class="control">
-              <label class="label">View Products</label>
-              <label class="label">Select Product</label>
-              <div class="select">
-                <select id="select">
-                   
-                       <select id="select"><option>All Products</option></select>
-                  {{#each categories}}
-                      <option>{{genre}}</option>
-                  {{/each}}
-                
-                    </select>
-                    <option id="{{id}}">{{name}}</option>
-                </select>
-              </div>
-            </div>
 
-          </div>
-        </div>
-      </div>
-
-    </div>
+<form class="levels-form-group">
+  {{! <label for="check-levels">Select Media Type:</label>
+  <select class="form-input" id="mediaType-inventory-levels">
+    <option value="Album" >Album</option>
+    <option value="Tape" >Tape</option>
+    <option value="CD" >CD</option>
+    </select> }}
+  <label for="check-levles"> Select Genre Type:></label>
+  <select class="form-input" id="genreType-inventory-levels">
+    <option value="2"> Rap</option>
+    <option value="4">Country</option>
+    <option value="3">Rock</option>
+    <option value="1">Classic Rock</option>
+    <option value="5">Alternative</option>
+  </select>
+  <div>
+    <button class="btn btn-primary" type="submit">Check store inventory</button>
   </div>
-</div>
-<div>
-  <button class="btn btn-primary" type="submit">Check store inventory</button>
-</div>
-
-<div class="container">
-  <div class="columns is-mobile">
-    <div class="column">
-      <div class="card">
-        <div class="card-content">
-          <div id="productDiv" class="content">
-            <label class="label">Product Info</label>
-            <ul id="productList">
-              {{#each products}}
-                <li>
-                  <label class="label">{{name}}</label>
-                  <p>Product Name: {{product_name}}</p>
-                  <p>Genre: {{tag_name}}</p>
-                  <p>Whole Sale Cost: {{wholesale_price}}</p>
-                  <p>Retail Price: {{price}}</p>
-                  <p>Stock: {{stock}}</p>
-
-                </li>
-              {{/each}}
-            </ul>
-
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
+</form>
+<br />
+<br />
 <div>
   <button class="btn btn-primary" type="submit">Check product list</button>
 </div>
 
 <script src="/js/inventory.js"></script>
-<script src="/js/login.js"></script>

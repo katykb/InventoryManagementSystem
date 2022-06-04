@@ -3,11 +3,9 @@ const path = require("path");
 const express = require("express");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
-const inventoryRoutes = require("./controllers/api/inventoryRoutes");
-// const homeRoutes = require('./controllers/homeRoutes');
-// const userRoutes = rquire('.controllers/api/userRoutes');
+//const inventoryRoutes = require("./controllers/api/inventoryRoutes");
 const sequelize = require("./config/connection");
-const controllers = require('./controllers');
+const controllers = require("./controllers");
 
 
 
