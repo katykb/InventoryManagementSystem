@@ -7,6 +7,7 @@ const inventoryFormHandler = async (event) => {
     .value.trim();
   const genre_type = document.querySelector("#genre-inventory").value.trim();
   const product_name = document.querySelector("#title-inventory").value.trim();
+  const product_artist = document.querySelector("#title-inventory").value.trim();
   const wholesale_price = document
     .querySelector("#wholesalePrice-inventory")
     .value.trim();
@@ -21,6 +22,7 @@ const inventoryFormHandler = async (event) => {
       media_type,
       genre_type,
       product_name,
+      product_artist,
       wholesale_price,
       retail_price,
     }),
@@ -29,7 +31,6 @@ const inventoryFormHandler = async (event) => {
 };
 
 
-<<<<<<< HEAD:public/js/inventory.js
   const media_type = document.querySelector("#mediaType-inventory-levels").value.trim();
   console.log(media_type);
   const genre_type = document.querySelector("#genreType-inventory-levels").value.trim();
@@ -41,10 +42,6 @@ const inventoryFormHandler = async (event) => {
 
   //   })
   // })
-
-}
-=======
->>>>>>> 0135293f230b173bd12b17920673dca04ad50457:public/js/enterInventory.js
 
 document
   .querySelector(".inventory-entry-form")
