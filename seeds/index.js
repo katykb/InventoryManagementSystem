@@ -5,8 +5,8 @@ const seedUser = require('./Users');
 
 
 const sequelize = require('../config/connection');
-const seedGenre = require('./Genre');
-const seedMedia = require('./Media');
+// const seedGenre = require('../Genre');
+// const seedMedia = require('../Media');
 
 const seedDatabase = async() => {
     await sequelize.sync ({ force : true});
