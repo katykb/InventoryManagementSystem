@@ -4,10 +4,12 @@ const productData = [
     {
         product_name: 'The Wall',
         product_artist: 'Pink Floyd',
+        retail_price: 23.99,
+        wholesale_price: 49.99,
         media_type: 'Album',
         stock: 200,
         category_id: 1,
-        media_type: 'CD'
+        media_type: 'CD',
 
     },
     {
