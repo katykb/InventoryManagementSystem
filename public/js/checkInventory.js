@@ -6,11 +6,11 @@ const genreFormHandler = async (event) => {
   //   .value.trim();
   // window.location.href = `/inventory/${media_type}`;
   // console.log(media_type);
-  const genre_type = document
+  const category_id = document
     .querySelector("#genreType-inventory-levels")
     .value.trim();
-  window.location.href = `/inventory/genre/${genre_type}`;
-  console.log(genre_type);
+  window.location.href = `/inventory/genre/${category_id}`;
+  console.log(category_id);
 
   // const getResponse = await fetch("/api/inventory/", {
   //   method: "GET",
@@ -36,13 +36,13 @@ const specificFormHandler = async (event) => {
   const product_name = document
     .querySelector("#specificType-inventory-levels")
     .value.trim();
-  window.location.href = `/inventory/specific/${product_name}`;
+  window.location.href = `/inventory/product/${product_name}`;
   console.log(product_name);
 
   const product_artist = document
     .querySelector("#specificType-inventory-levels")
     .value.trim();
-  window.location.href = `/inventory/specific/${product_artist}`;
+  window.location.href = `/inventory/artist/${product_artist}`;
   console.log(product_artist);
 };
 

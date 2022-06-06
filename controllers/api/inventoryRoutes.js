@@ -17,6 +17,7 @@ router.post("/", async (req, res) => {
 
 router.get("/", async (req, res) => {
   try {
+    res.send('it is working');
   } catch (err) {}
 });
 
