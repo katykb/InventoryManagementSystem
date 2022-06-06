@@ -66,7 +66,7 @@ router.get("/inventory/media/:media_type", async (req, res) => {
   res.render("showProducts", { matchingProducts });
 });
 
-router.get("/inventory/specific/:product_name", async (req, res) => {
+router.get("/inventory/name/:product_name", async (req, res) => {
   const product_name = req.params.product_name;
   const titleProducts = await Product.findAll({ where: { product_name } });
   const matchingProducts = titleProducts.map((product) => {
@@ -76,7 +76,7 @@ router.get("/inventory/specific/:product_name", async (req, res) => {
   res.render("showProducts", { matchingProducts });
 });
 
-router.get("/inventory/specific/:product_artist", async (req, res) => {
+router.get("/inventory/artist/:product_artist", async (req, res) => {
   const product_artist = req.params.product_artist;
   const artistProducts = await Product.findAll({ where: { product_artist } });
   const matchingProducts = artistProducts.map((product) => {
