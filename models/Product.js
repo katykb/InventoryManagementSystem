@@ -39,6 +39,17 @@ Product.init(
       type: DataTypes.DECIMAL,
       allowNull: false,
     },
+
+    in_stock: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+
+    quantity: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+
     // this is the genre
     category_id: {
       type: DataTypes.INTEGER,
