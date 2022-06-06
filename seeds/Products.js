@@ -4,10 +4,15 @@ const productData = [
     {
         product_name: 'The Wall',
         product_artist: 'Pink Floyd',
-        media_type: 'Album',
+        retail_price: 30.99,
+        wholesale_price: 15.99,
         stock: 200,
         category_id: 1,
-        media_type: 'CD'
+        media_type: 'Album',
+        genre_type: 'Classic Rock',
+        in_stock: true,
+        quantity: 4
+
 
     },
     {
@@ -17,8 +22,10 @@ const productData = [
         wholesale_price: 15.99,
         stock: 200,
         category_id: 1,
-        media_type: 'CD'
-
+        media_type: 'CD',
+        genre_type: 'Classic Rock',
+        in_stock: true,
+        quantity: 3
 
     },
     {
@@ -28,7 +35,10 @@ const productData = [
         wholesale_price: 12.99,
         stock: 250,
         category_id: 1,
-        media_type: 'Album'
+        media_type: 'Album',
+        genre_type: 'Classic Rock',
+        in_stock: true,
+        quantity: 4
     },
     {
         product_name: 'The Chronic',
@@ -37,7 +47,10 @@ const productData = [
         wholesale_price: 9.99,
         stock: 500,
         category_id: 2,
-        media_type: 'CD'
+        media_type: 'CD',
+        genre_type: 'Rap',
+        in_stock: true,
+        quantity: 5
     }
 ]
 
