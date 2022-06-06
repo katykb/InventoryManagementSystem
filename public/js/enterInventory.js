@@ -46,12 +46,9 @@ window.location.href = `/inventory/${genre_type}`;
 //   method: "GET",
 //   body: JSON.stringify({
 
-<<<<<<< HEAD
-=======
 //   })
 // })
 
->>>>>>> d8b71a95b3571a76036db4fcac5065b6a55ebdf6
 document
   .querySelector(".inventory-entry-form")
   .addEventListener("submit", inventoryFormHandler);

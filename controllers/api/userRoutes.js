@@ -5,7 +5,7 @@ const { User } = require('../../models');
 //added console logs to show errors in the terminal
 router.post('/login', async (req, res) => {
   try {
-    
+
     const userData = await User.findOne({ where: { username: req.body.username } });
 
     if (!userData) {
@@ -16,7 +16,7 @@ router.post('/login', async (req, res) => {
       return;
     }
 
- 
+
     const validPassword = await userData.checkPassword(req.body.password);
 
     if (!validPassword) {
@@ -27,7 +27,7 @@ router.post('/login', async (req, res) => {
       return;
     }
 
- 
+
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
@@ -53,24 +53,24 @@ router.post('/logout', (req, res) => {
 });
 
 //create new employee
-router.post("/",  async (req, res) => {
+router.post("/", async (req, res) => {
   try {
- const newUser = await User.create(req.body);
- req.session.save(() => {
-   req.session.user_id = newUser.id;
-   req.session.logged_in = true;
-   
-   res.json({ user: newUser, message: 'New employee created' });
-   console.log(newUser);
-  //  res.redirect("/api/users/register")
- });
- 
-  } 
+    const newUser = await User.create(req.body);
+    req.session.save(() => {
+      req.session.user_id = newUser.id;
+      req.session.logged_in = true;
+
+      res.json({ user: newUser, message: 'New employee created' });
+      console.log(newUser);
+      //  res.redirect("/api/users/register")
+    });
+
+  }
   catch (err) {
-   console.log("database error", err);
-   res.status(500).json(err);
- }
- 
- });
+    console.log("database error", err);
+    res.status(500).json(err);
+  }
+
+});
 
 module.exports = router;
