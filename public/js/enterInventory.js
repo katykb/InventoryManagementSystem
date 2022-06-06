@@ -7,6 +7,7 @@ const inventoryFormHandler = async (event) => {
     .value.trim();
   const category_id = document.querySelector("#genre-inventory").value.trim();
   const product_name = document.querySelector("#title-inventory").value.trim();
+  
   const wholesale_price = document
     .querySelector("#wholesalePrice-inventory")
     .value.trim();
@@ -23,6 +24,7 @@ const inventoryFormHandler = async (event) => {
       media_type,
       category_id,
       product_name,
+      product_artist,
       wholesale_price,
       retail_price,
       in_stock,
