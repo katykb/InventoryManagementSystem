@@ -28,11 +28,17 @@
       <option value="5">Rap</option>
       <option value="4">Country</option>
       <option value="3">Rock</option>
+      <option value="4">Classic Rock</option>
+      <option value="3">Pop</option>
     </select>
   </div>
   <div class="form-group">
     <label for="title">Product Name:</label>
     <input class="form-input" type="text" id="title-inventory" />
+  </div>
+  <div class="form-group">
+    <label for="artist">Product Artist:</label>
+    <input class="form-input" type="text" id="artist-inventory" />
   </div>
   <div class="form-group">
     <label for="costPrice">Cost:</label>
@@ -42,6 +48,17 @@
     <label for="retailPrice">Retail:</label>
     <input class="form-input" type="text" id="retailPrice-inventory" />
   </div>
+  <div class="form-group">
+    <label for="quantity">Quantity:</label>
+    <input class="form-input" type="text" id="quantity-inventory" />
+  </div>
+  <div class="form-group">
+    <label for="inStock">In Stock:</label>
+    <select class="form-input" id="inStock-inventory">
+      <option>Yes</option>
+      <option>No</option>
+    </select>
+  </div>
 
   <div>
     <button class="btn btn-primary" type="submit">Enter New Item</button>
@@ -49,14 +66,5 @@
 </form>
 <br />
 <br />
-<section>
-  <h1 class="title">
-    Inventory On Hands
-    {{logged_in}}
-  </h1>
-  <h3 class="subtitle">
-    Check what is currently in the store
-  </h3>
-</section>
 
 <script src="/js/enterInventory.js"></script>

@@ -14,7 +14,8 @@ const inventoryFormHandler = async (event) => {
   const retail_price = document
     .querySelector("#retailPrice-inventory")
     .value.trim();
-    
+  const in_stock = document.querySelector("#quantity-inventory").value.trim();
+  const quantity = document.querySelector("#quantity-inventory").value.trim();
 
   const response = await fetch("/api/inventory", {
     method: "POST",
@@ -25,28 +26,34 @@ const inventoryFormHandler = async (event) => {
       product_artist,
       wholesale_price,
       retail_price,
+      in_stock,
+      quantity,
     }),
     headers: { "Content-Type": "application/json" },
   });
 };
 
+const media_type = document
+  .querySelector("#mediaType-inventory-levels")
+  .value.trim();
+console.log(media_type);
+const genre_type = document
+  .querySelector("#genreType-inventory-levels")
+  .value.trim();
+window.location.href = `/inventory/${genre_type}`;
 
-  const media_type = document.querySelector("#mediaType-inventory-levels").value.trim();
-  console.log(media_type);
-  const genre_type = document.querySelector("#genreType-inventory-levels").value.trim();
-  window.location.href= `/inventory/${genre_type}`
+// const getResponse = await fetch("/api/inventory/", {
+//   method: "GET",
+//   body: JSON.stringify({
 
-  // const getResponse = await fetch("/api/inventory/", {
-  //   method: "GET",
-  //   body: JSON.stringify({
+<<<<<<< HEAD
+=======
+//   })
+// })
 
-  //   })
-  // })
-
+>>>>>>> d8b71a95b3571a76036db4fcac5065b6a55ebdf6
 document
   .querySelector(".inventory-entry-form")
   .addEventListener("submit", inventoryFormHandler);
-
-
 
 //Add route to push inventory to database
