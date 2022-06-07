@@ -3,8 +3,7 @@ const { Product } = require("../../models");
 
 router.post("/", async (req, res) => {
   try {
-    const newProduct = await Product.create({
-      ...req.body,
+    const newProduct = await Product.create (req.body)({
       user_id: req.session.user_id,
     });
     console.log(newProduct);

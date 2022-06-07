@@ -8,8 +8,8 @@ const signupFormHandler = async (event) => {
     .querySelector("#restrictions-signup")
     .value.trim();
 
-  if (employeeName && newUsername && restrictions) {
-    const response = await fetch("/api/users/", {
+  if (employeeName && newUsername && newPassword && restrictions) {
+    const response = await fetch("/api/users", {
       method: "POST",
       body: JSON.stringify({
         newUsername,
@@ -19,7 +19,7 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      res.redirect('/');
     } else {
       alert("failed to sign up");
     }
@@ -27,5 +27,7 @@ const signupFormHandler = async (event) => {
 };
 
 document
-  .querySelector(".signup-form")
-  .addEventListener("submit", signupFormHandler);
+.querySelector(".signup-form")
+.addEventListener("submit", signupFormHandler);
+
+  
