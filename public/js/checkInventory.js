@@ -33,16 +33,17 @@ const mediaFormHandler = async (event) => {
 const specificFormHandler = async (event) => {
   event.preventDefault();
 
-  const product_name = document
-    .querySelector("#specificType-inventory-levels")
-    .value.trim();
-  window.location.href = `/inventory/product/${product_name}`;
-  console.log(product_name);
+  // const product_name = document
+  //   .querySelector("#specificType-inventory-levels")
+  //   .value.trim();
+  // window.location.href = `/inventory/product/${product_name}`;
+  // console.log(product_name);
+const specificSearch = document.querySelector('#specificSearch').value.trim();
 
   const product_artist = document
     .querySelector("#specificType-inventory-levels")
     .value.trim();
-  window.location.href = `/inventory/artist/${product_artist}`;
+  window.location.href = `/inventory/${product_artist}/${specificSearch}`;
   console.log(product_artist);
 };
 
