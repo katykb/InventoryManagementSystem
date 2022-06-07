@@ -20,7 +20,6 @@
   </div>
 </form>
 
-
 <form class="genre-form-group">
   <label for="check-levles"> Select Genre Type:></label>
   <select class="form-input" id="genreType-inventory-levels">
@@ -39,9 +38,10 @@
 <form class="specific-form-group">
   <label for="check-levles"> Select Genre Type:></label>
   <select class="form-input" id="specificType-inventory-levels">
-    <option value="product_artist">Artist</option>
-    <option value="product_name">Title</option>
+    <option value="artist">Artist</option>
+    <option value="name">Title</option>
   </select>
+  <input type="text" id="specificSearch" />
 
   <div>
     <button class="btn btn-primary" type="submit">Search by Artist or Title</button>
