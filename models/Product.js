@@ -42,7 +42,7 @@ Product.init(
 
     in_stock: {
       type: DataTypes.BOOLEAN,
-      allowNull: false,
+      allowNull: true,
     },
 
     quantity: {
