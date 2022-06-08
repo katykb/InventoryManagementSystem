@@ -41,9 +41,9 @@ router.post("/", async (req, res) => {
 
 router.put('/:id/subtract', async (req, res) => {
   const subtractProduct = await Product.findByPk(req.params.id)
-  const oldQuantity = subtractProduct.quantity
+  const currentQuantity = subtractProduct.quantity
   const dbResponse = await Product.update({
-    quantity: oldQuantity - 1
+    quantity: currentQuantity - 1
   },
   {
     where: {

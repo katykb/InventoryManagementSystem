@@ -64,11 +64,12 @@
     <div class="form-group">
     <label for="genreType">Genre:</label>
     <select class="form-input" id="genre-inventory">
-      <option value="5">Rap</option>
-      <option value="4">Country</option>
-      <option value="3">Rock</option>
       <option value="1">Classic Rock</option>
       <option value="2">Pop</option>
+      <option value="3">Rock</option>
+      <option value="4">Country</option>
+      <option value="5">Rap</option>
+      <option value="6">Alternative</option>
     </select>
   </div>
   <div class="form-group">
@@ -92,21 +93,25 @@
     <label for="quantity">Quantity:</label>
     <input class="form-input" type="text" id="quantity-inventory" />
   </div>
-  <div class="form-group">
-    <label for="inStock">In Stock:</label>
-    <select class="form-input" id="inStock-inventory">
-      <option value="true">Yes</option>
-      <option value="false">No</option>
-    </select>
-  </div>
-  
+   
   <div>
     <button class="btn btn-primary enter-inv-form-button" type="submit">Enter New Item</button>
   </div>
 </form>
 
     </div>
+    
+<div class="alert alert-success collapse" id ="myAlert" role="alert">
+  <a href="#" class="close" data-dismiss="alert">&times;</a>
+  <h4 class="alert-heading">Well done!</h4>
+  <p>Your item has been added into inventory</p>
+  <hr>
+  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+</div>
 
+    <a href="/subtractInventory"><button class="btn btn-primary" type="submit" id="subtract-inventory-button">Subract an Item</button></a>
+    
 </body>
 
 <script src="/js/enterInventory.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
