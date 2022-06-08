@@ -8,8 +8,8 @@ const signupFormHandler = async (event) => {
     .querySelector("#restrictions-signup")
     .value.trim();
 
-  if (employeeName && newUsername && newPassword && restrictions) {
-    const response = await fetch("/api/users", {
+  if (employeeName && newUsername && restrictions) {
+    const response = await fetch("/api/users/", {
       method: "POST",
       body: JSON.stringify({
         newUsername,
@@ -19,7 +19,7 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      res.redirect('/');
+      document.location.replace('/');
     } else {
       alert("failed to sign up");
     }

@@ -54,9 +54,23 @@ router.post('/logout', (req, res) => {
 
 //create new employee
 router.post("/", async (req, res) => {
+  try {
     const newUser = await User.create(req.body);
-      res.json(newUser);
+    req.session.save(() => {
+      req.session.user_id = newUser.id;
+      req.session.logged_in = true;
+
+      res.json({ user: newUser, message: 'New employee created' });
+      console.log(newUser);
+      //  res.redirect("/api/users/register")
     });
-  
+
+  }
+  catch (err) {
+    console.log("database error", err);
+    res.status(500).json(err);
+  }
+
+});
 
 module.exports = router;
