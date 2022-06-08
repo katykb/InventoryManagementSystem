@@ -1,39 +1,84 @@
-<section>
-  <h1 class="title">
-    Inventory On Hands
-    {{logged_in}}
-  </h1>
-  <h3 class="subtitle">
-    Check what is currently in the store
-  </h3>
-</section>
-
-<form class="media-form-group">
-  <label for="check-levels">Select Media Type:</label>
-  <select class="form-input" id="mediaType-inventory-levels">
-    <option value="Album">Album</option>
-    <option value="Tape">Tape</option>
-    <option value="CD">CD</option>
-  </select>
-  <div>
-    <button class="btn btn-primary" type="submit">Search by Media Type</button>
-  </div>
-</form>
 
 
-<form class="genre-form-group">
-  <label for="check-levles"> Select Genre Type:></label>
-  <select class="form-input" id="genreType-inventory-levels">
-    <option value="2"> Rap</option>
-    <option value="4">Country</option>
-    <option value="3">Rock</option>
-    <option value="1">Classic Rock</option>
-    <option value="5">Alternative</option>
-  </select>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Dashboard - Brand</title>
+        <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.reflowhq.com/v1/toolkit.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+        <link rel="stylesheet" href="./fonts/fontawesome-all.min.css">
+        <link rel="stylesheet" href="./css/styles.min2.css">
+        <link rel="stylesheet" href="./css/homepage.css"
 
-  <div>
-    <button class="btn btn-primary" type="submit">Search by Genre</button>
-  </div>
-</form>
+<body id="page-top">
+    <div id="wrapper">
+        <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" id="sidebar" style="width: 280px;">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+              <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+              <span class="fs-4">Sidebar</span>
+            </a>
+            <hr>
+            <div class="dropdown"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#">Select Media Type</a>
+                <div class="dropdown-menu">
+                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-3"><label class="form-check-label" for="formCheck-3">Album</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Tape</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">CD</label></div>
+                </div>
+            </div>
+            <div class="dropdown genre-form-group"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#">Select Genre Type</a>
+                <div class="dropdown-menu">
+                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-4"><label class="form-check-label" for="formCheck-4">Rap</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-5"><label class="form-check-label" for="formCheck-5">Country</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-6"><label class="form-check-label" for="formCheck-6">Rock</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-7"><label class="form-check-label" for="formCheck-7">Classic</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-8"><label class="form-check-label" for="formCheck-8">Alternative</label></div>
+                </div>
+                <button type="button" id="submit-btn" class="btn btn-primary">submit</button>
+            </div>
+            </div>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
+                    <div class="container"><a class="navbar-brand" href="#">Brand</a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
+                        <div class="collapse navbar-collapse" id="navbarResponsive">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item nav-link"><a class="nav-link active" href="#about">About</a></li>
+                                <li class="nav-item nav-link"></li>
+                                <li class="nav-item nav-link">
+                                    <a class="nav-link" href="#contact">logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="col">
+                    <div data-reflow-type="product-list" data-reflow-order="date_desc">
+                        <div class="reflow-product-list">
+                            <div class="ref-products">
+                                {{#each matchingProducts}}
+                                <div class="ref-product"><img class="ref-image" src="https://cdn.bootstrapstudio.io/products/product-30_md.jpg" loading="lazy">
+                                    <div class="ref-product-data">
+                                        <div class="ref-product-info">
+                                            <h5 class="ref-name">Album Title: {{product_name}}</h5>
+                                            <p class="ref-excerpt"><h3>Wholesale Price: {{wholesale_price}}</h3></p>
+                                        </div>
+                                        <p class="ref-price"><h3>Retail Price: {{retail_price}}</h3></p>
+                                    </div>
+                                </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.reflowhq.com/v1/toolkit.min.js"></script>
+    <script src="./js/script.min.js"></script>
+    {{!-- <script src="./js/checkInventory.js" --}}
 
-<script src="/js/checkInventory.js"></script>
+
+</body></html>

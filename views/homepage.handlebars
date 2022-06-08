@@ -1,6 +1,4 @@
-{{! dashboard page }}
-{{! links to inventory and sales }}
-<<<<<<< HEAD
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -14,25 +12,6 @@
     <link rel="stylesheet" href="./css/homepage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-=======
-<p> you are now logged in</p>
-<p>What would you like to do next</p>
-<a href="/enterInventory"><button
-    class="btn btn-primary"
-    type="submit"
-    id="new-inventory-button"
-  >Enter New Inventory</button></a>
-<a href="/checkInventory"><button
-    class="btn btn-primary"
-    type="submit"
-    id="on-hand-button"
-  >Check On-Hand Levels</button></a>
-<a href="/registerEmployee"><button
-    class="btn btn-primary"
-    type="submit"
-    id="register-new-employee"
-  >Register a New Employee</button></a>
->>>>>>> 820767f8bcbc3fb35b3d0587692ba2633ab4d20e
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
     <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
@@ -58,12 +37,12 @@
             <div class="row text-center" id="menuBox">
                 <div class="col-md-4 offset-xl-0"><h4 class="section-heading">Inventory</h4>
                     <p id="inventory">Check your inventory or add new items</p>
-                    <a href="/inventory"><i class="fas fa-store fa-4x inventory"></i></a>
+                    <a href="/checkInventory"><i class="fas fa-store fa-4x inventory"></i></a>
                 </div>
                 <div class="col-md-4">
-                    <h4 class="section-heading">Sales</h4>
+                    <h4 class="section-heading">ADD new object</h4>
                     <p id="sales">All of your company sales</p>
-                    <a href='/sales'><i class="fas fa-money-bill-wave money fa-4x"></i></a>
+                    <a href='/enterInventory'><i class="fas fa-plus-square fa-4x square"></i></a>
                 </div>
                 <div class="col-md-4">
                     <h4 class="section-heading">ADD new user</h4>

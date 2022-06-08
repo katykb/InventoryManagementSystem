@@ -1,6 +1,6 @@
 body{
   position: relative;
-
+  background-image:url('../img/pexels-mick-haupt-6131928.jpg')
 }
 
 
@@ -75,7 +75,7 @@ a {
   color: white;
 }
 
-.fas.fa-money-bill-wave.money {
+.fas.fa-plus-square.fa-4x.square {
   position: absolute;
   top: 160px;
   right: 40%;
@@ -104,4 +104,43 @@ a {
 #menuBox {
   border:2px solid white;
   border-radius: 8px;
+}
+
+.d-flex.flex-column.flex-shrink-0.p-3.bg-light{
+  height: 1193px;
+  bottom: 0px;
+  position: absolute;
+}
+
+#sidebar{
+  background-color: black;
+}
+
+.dropdown{
+  margin: 136px auto;
+}
+
+
+#invenCol{
+  margin-top: 83px;
+}
+
+div#sidebar{
+  height:100%;
+  position:absolute;
+  top:96px;
+}
+
+.col{
+flex: 1 0 0%;
+    position: absolute;
+    left: 294px;
+    top: 110px;
+    background: white;
+}
+
+button.btn.btn-primary {
+  position: absolute;
+  left: 27px;
+  bottom: 410px;
 }
