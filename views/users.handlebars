@@ -1,11 +1,50 @@
+<style>
+  table { font-family: arial, sans-serif; border-collapse: collapse; width:
+  100%; } td, th { border: 1px solid #dddddd; text-align: left; padding: 8px; }
+  tr:nth-child(even) { background-color: #dddddd; }
+</style>
 <div>
-    <h1>User List</h1>
+  <h1>User List</h1>
 
-    <ul>
-        {{#each users}}
-        <li>
-            {{username}}
-        </li>
-        {{/each}}
-    </ul>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>Created</th>
+    </tr>
+    <tr>
+    {{#each users}}
+
+      
+        <td>{{id}}</td>
+
+      
+     
+
+    {{/each}}
+    </tr>
+    <tr>
+    {{#each users}}
+
+     
+      
+        <td>{{username}}</td>
+
+      
+      
+
+    {{/each}}
+    </tr>
+    <tr>
+    {{#each users}}
+
+     
+     
+        <td>{{createdAt}}</td>
+
+      
+
+    {{/each}}
+    </tr>
+  </table>
 </div>
