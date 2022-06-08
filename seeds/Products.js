@@ -9,7 +9,7 @@ const productData = [
         stock: 200,
         category_id: 1,
         media_type: 'Album',
-        genre_type: 'Classic Rock',
+        //genre_type: 'Classic Rock',
         in_stock: true,
         quantity: 4
 
@@ -23,7 +23,7 @@ const productData = [
         stock: 200,
         category_id: 1,
         media_type: 'CD',
-        genre_type: 'Classic Rock',
+        //genre_type: 'Classic Rock',
         in_stock: true,
         quantity: 3
 
@@ -36,7 +36,7 @@ const productData = [
         stock: 250,
         category_id: 1,
         media_type: 'Album',
-        genre_type: 'Classic Rock',
+        //genre_type: 'Classic Rock',
         in_stock: true,
         quantity: 4
     },
@@ -46,9 +46,9 @@ const productData = [
         retail_price: 18.99,
         wholesale_price: 9.99,
         stock: 500,
-        category_id: 2,
+        category_id: 5,
         media_type: 'CD',
-        genre_type: 'Rap',
+        //genre_type: 'Rap',
         in_stock: true,
         quantity: 5
     }

@@ -16,14 +16,15 @@ Product.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    genre_type: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
+    // genre_type: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    // },
 
     product_name: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true
     },
 
     product_artist: {
