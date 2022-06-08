@@ -14,7 +14,6 @@ const inventoryFormHandler = async (event) => {
   const retail_price = document
     .querySelector("#retailPrice-inventory")
     .value.trim();
-  //const in_stock = document.querySelector("#inStock-inventory").value.trim();
   const quantity = parseInt(
     document.querySelector("#quantity-inventory").value.trim()
   );
@@ -31,7 +30,6 @@ const inventoryFormHandler = async (event) => {
       product_artist,
       wholesale_price,
       retail_price,
-      //in_stock,
       quantity,
       product_artist,
     }),
@@ -45,33 +43,44 @@ const inventoryFormHandler = async (event) => {
   }
 };
 
-// const media_type = document.querySelector("#mediaType-inventory-levels").value.trim();
-
-// console.log(media_type);
-// const genre_type = document
-//   .querySelector("#genreType-inventory-levels").value.trim();
-
-// window.location.href = `/inventory/${genre_type}`;
-
-// const getResponse = await fetch("/api/inventory/", {
-//   method: "GET",
-//   body: JSON.stringify({
-
-//   })
-// })
-
 document
   .querySelector(".inventory-entry-form")
   .addEventListener("submit", inventoryFormHandler);
 
 const alertHandler = async (event) => {
   event.preventDefault();
+  console.log(alertHandler);
+  const myAlert = document.querySelector("#myAlert");
+  myAlert.addEventListener("close.bs.alert", (event) => {});
+  const alertClose = document.querySelector("#linkClose");
 
-  const myAlert = document.getElementById("#myAlert");
-  document.querySelector("#myAlert").addEventListener(".submit", myAlert);
+  document.querySelector("#alertClose").addEventListener("submit", alertClose);
 };
-// do something, for instance, explicitly move focus to the most appropriate element,
-// so it doesn't get lost/reset to the start of the page
-// document.getElementById('...').focus()
 
-//Add route to push inventory to database
+const subtractFormHandler = async (event) => {
+  event.preventDefault();
+
+  const product_name = document.querySelector("#title-inventory").value.trim();
+  const product_artist = document
+    .querySelector("#artist-inventory")
+    .value.trim();
+
+  const response = await fetch("/api/inventory", {
+    method: "PUT",
+    body: JSON.stringify({
+      product_name,
+      product_artist,
+    }),
+    headers: { "Content-Type": "application/json" },
+  });
+
+  if (response.ok) {
+    document.location.replace("/enterInventory");
+  } else {
+    alert("Failed to subtract inventory");
+  }
+};
+
+document
+  .querySelector(".inventory-subtract-form")
+  .addEventListener("submit", subtractFormHandler);

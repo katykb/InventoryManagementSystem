@@ -46,6 +46,20 @@ router.get("/checkInventory", (req, res) => {
   }
 });
 
+router.get("/subtractInventory", (req, res) => {
+  console.log("Inventory GET");
+  if (req.session.logged_in) {
+    console.log(req.session);
+    console.log(product_artist, product_name);
+    res.render("subtractInventory", {
+      logged_in: true,
+      username: req.session.username,
+    });
+  } else {
+    res.redirect("/");
+  }
+});
+
 router.get("/inventory/genre/:category_id", async (req, res) => {
   const category_id = req.params.category_id;
   const categoryProducts = await Product.findAll({ where: { category_id } });
@@ -73,7 +87,7 @@ router.get("/inventory/name/:product_name", async (req, res) => {
     return product.get({ plain: true });
   });
   console.log(matchingProducts);
-  console.log(product_name)
+  console.log(product_name);
   res.render("showProducts", { matchingProducts });
 });
 
@@ -103,16 +117,15 @@ router.get("/register", (req, res) => {
   res.render("registerEmployee");
 });
 
-
 router.get("/users", async (req, res) => {
   const db_users = await User.findAll({});
 
-  const users = db_users.map(user => user.get({plain: true}))
+  const users = db_users.map((user) => user.get({ plain: true }));
 
   console.log(users);
 
-  res.render("users", {users})
-})
+  res.render("users", { users });
+});
 module.exports = router;
 
 // router.get('/inventory/:product_name', async (req, res) => {

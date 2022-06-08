@@ -102,15 +102,34 @@
     </div>
     
 <div class="alert alert-success collapse" id ="myAlert" role="alert">
-  <a href="#" class="close" data-dismiss="alert">&times;</a>
+  <a id="linkClose" href="#" class="close">&times;</a>
   <h4 class="alert-heading">Well done!</h4>
   <p>Your item has been added into inventory</p>
   <hr>
   <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
 </div>
 
-    <a href="/subtractInventory"><button class="btn btn-primary" type="submit" id="subtract-inventory-button">Subract an Item</button></a>
-    
+
+<form class="form inventory-subtract-form">
+
+  <div class="form-group">
+    <label for="title">Product Name:</label>
+    <input class="form-input" type="text" id="title-inventory" />
+  </div>
+  <div class="form-group">
+    <label for="artist">Product Artist:</label>
+    <input class="form-input" type="text" id="artist-inventory" />
+  </div>
+
+  <div>
+    <button
+      class="btn btn-primary subtract-inv-form-button"
+      type="submit"
+    >Subract Item from Inventory</button>
+  </div>
+</form>
+    {{!-- <a href="/subtractInventory"><button class="btn btn-primary" type="submit" id="subtract-inventory-button">Subract an Item</button></a>
+     --}}
 </body>
 
 <script src="/js/enterInventory.js"></script>
