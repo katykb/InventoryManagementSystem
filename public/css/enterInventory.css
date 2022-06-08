@@ -1,49 +1,94 @@
-html {
+/* html {
   overflow: scroll;
-}
+} */
 
 body {
-  background: url("../image/enter-inv-background.jpg") no-repeat center center
-    fixed;
+  background: url("../img/enter-inv-background.jpg") no-repeat center center fixed;
   background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#form-container {
+/* #form-container {
     scroll-snap-stop: y mandatory;
+    } */
+.enterInventoryTitle {
+  text-align: center;
+  /* margin-top: 70px;
+  background: rgba(255, 255, 255, .5);
+  padding: 15px; */
 }
-.enterInv {
+
+
+.enterInventoryTitle p {
   color: #04001c;
   font-size: 60px;
   font-weight: bold;
-  margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 96px;
   text-transform: uppercase;
   display: inline-block;
   background: rgba(255, 255, 255, .5);
-  margin-bottom: 40px;
+  margin-bottom: 170px;
   padding: 20px;
   text-align: center;
 }
 
 
-.enterInv p {
+
+/* .enterInv p {
   color: #04001c;
   font-size: 50px;
   font-weight: bold;
   margin: 0px;
   text-transform: uppercase;
   display: inline-block;
+} */
+
+#c1 {
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+#c2 {
+  margin-right: 30px;
+  margin-top: 5px;
+}
+#c3 {
+  margin-right: 30px;
+  margin-top: 5px;
+}
+#c4 {
+  margin-right: 30px;
+  margin-top: 5px;
+}
+#c5 {
+  margin-right: 70px;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-bottom: 50px;
+}
+#c6 {
+  margin-right: 30px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+#c7 {
+  margin-right: 30px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .inventory-entry-form {
   margin: -30px auto;
-  width: 600px;
-  background: rgb(0, 0, 0, 0.5);
+  width: 1000px;
+  background: rgb(0, 0, 0, 0.7);
   padding: 50px;
   border: 2px solid white;
   border-radius: 8px;
-  overflow: scroll;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .form-group {
@@ -69,16 +114,30 @@ body {
   font-style: italic;
 }
 
-.enter-inv-form-button {
-  margin-top: 40px;
-  text-align: center;
+#inventory-buttons {
+  display: flex;
+  justify-items: center;
+  
+}
+
+
+#submit1 {
+  margin-left: 220px;
 }
 
 button {
-  font-size: 20px;
+  font-size: 25px;
   padding: 10px 40px;
-  background: #96ded1;
-  border: none;
-  color: white;
+  background: #96ded1 !important;
+  border: 2px solid #96ded1 !important;
+  color: white
+
 }
 
+#submit2 {
+  margin-left: 50px;
+}
+
+button:focus {
+  outline:white !important;
+}

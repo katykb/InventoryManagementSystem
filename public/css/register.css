@@ -5,31 +5,42 @@ body {
 
 }
 
+
 .registerEmployeeTitle {
     text-align: center;
-    margin-top: 70px;
-    background: rgba(255,255,255,.5);
-    padding: 15px;
 }
-
 
 .registerEmployeeTitle p {
     color: #04001c;
     font-size: 60px;
     font-weight: bold;
-    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 96px;
     text-transform: uppercase;
     display: inline-block;
+    background: rgba(255, 255, 255, .5);
+    margin-bottom: 10px;
+    padding: 20px;
+    text-align: center;
 }
 
-.form{
-    margin-right: 10px;
+#enter-info {
+    display: block;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;;
+}
+
+.form {
+    margin-right: -320px;
     width: 450px;
     background: rgb(0, 0, 0, .5);
     padding: 50px;
     border: 2px solid white;
     border-radius: 8px;
-    float:right;
+    float: right;
 
 }
 
@@ -55,7 +66,7 @@ body {
     text-align: center;
     font-style: italic;
     font-size: 20px;
-    color:gray
+    color: gray
 }
 
 .form-group input {
@@ -74,12 +85,17 @@ body {
     text-align: center;
 }
 
-button {
-    font-size: 20px;
+.btn-primary {
+    font-size: 25px;
     padding: 10px 40px;
-    background: #96DED1;
-    border: none;
+    background: #96ded1 !important;
+    border: 2px solid #96ded1 !important;
     color: white;
-    border-radius: 8px;
-
+    margin-left: 10px;
+    margin-top: 10px;
 }
+
+/* button #logout {
+    background-color: lightgray !important;
+    color:white;
+} */
