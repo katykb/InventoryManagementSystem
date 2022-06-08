@@ -1,7 +1,17 @@
-{{! dashboard page }}
-{{! links to inventory and sales }}
-<p> you are now logged in</p>
-<p>What would you like to do next</p>
+{{!-- <head>
+<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700&amp;display=swap">
+    <link rel="stylesheet" href="./fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="./fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/homepage.css">
+
+
+</head> --}}
+{{!-- <p> you are now logged in</p>
+<p>What would you like to do next</p> --}}
 <a href="/enterInventory"><button class="btn btn-primary" type="submit" id="new-inventory-button">Enter New
         Inventory</button></a>
 <a href="/checkInventory"><button class="btn btn-primary" type="submit" id="on-hand-button">Check On-Hand
@@ -20,7 +30,7 @@
                     <li class="nav-item nav-link"><a class="nav-link active" href="#about">About</a></li>
                     <li class="nav-item nav-link"></li>
                     <li class="nav-item nav-link">
-                        <button class="btn" id="logout">logout</a>
+                        <button class="btn" id="logout">logout</button>
                     </li>
                 </ul>
             </div>
@@ -38,7 +48,7 @@
                 <div class="col-md-4 offset-xl-0">
                     <h4 class="section-heading">Inventory</h4>
                     <p id="inventory">Check your inventory or add new items</p>
-                    <a href="/inventory"><i class="fas fa-store fa-4x inventory"></i></a>
+                    <a href="/checkInventory"><i class="fas fa-store fa-4x inventory"></i></a>
                 </div>
                 <div class="col-md-4">
                     <h4 class="section-heading">Sales</h4>
@@ -48,7 +58,7 @@
                 <div class="col-md-4">
                     <h4 class="section-heading">ADD new user</h4>
                     <p id="user">Add a new user to your company</p>
-                    <a href='/users'><i class="fas fa-user fa-4x user"></i></a>
+                    <a href='/register'><i class="fas fa-user fa-4x user"></i></a>
                 </div>
             </div>
         </div>
