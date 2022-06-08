@@ -19,6 +19,9 @@ const categoryData = [
 }, 
 {
     name  : 'Rap'
+},
+{
+    name: 'Alternative'
 }
 ];
 

@@ -14,13 +14,13 @@ const inventoryFormHandler = async (event) => {
   const retail_price = document
     .querySelector("#retailPrice-inventory")
     .value.trim();
-  const in_stock = document.querySelector("#inStock-inventory").value.trim();
-  const quantity = parseInt(document.querySelector("#quantity-inventory").value.trim());
+  //const in_stock = document.querySelector("#inStock-inventory").value.trim();
+  const quantity = parseInt(
+    document.querySelector("#quantity-inventory").value.trim()
+  );
   const product_artist = document
     .querySelector("#artist-inventory")
     .value.trim();
-
-  
 
   const response = await fetch("/api/inventory", {
     method: "POST",
@@ -31,7 +31,7 @@ const inventoryFormHandler = async (event) => {
       product_artist,
       wholesale_price,
       retail_price,
-      in_stock,
+      //in_stock,
       quantity,
       product_artist,
     }),
@@ -63,5 +63,15 @@ const inventoryFormHandler = async (event) => {
 document
   .querySelector(".inventory-entry-form")
   .addEventListener("submit", inventoryFormHandler);
+
+const alertHandler = async (event) => {
+  event.preventDefault();
+
+  const myAlert = document.getElementById("#myAlert");
+  document.querySelector("#myAlert").addEventListener(".submit", myAlert);
+};
+// do something, for instance, explicitly move focus to the most appropriate element,
+// so it doesn't get lost/reset to the start of the page
+// document.getElementById('...').focus()
 
 //Add route to push inventory to database
