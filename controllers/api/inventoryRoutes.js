@@ -39,6 +39,20 @@ router.post("/", async (req, res) => {
   } 
 });
 
+router.put('/:id/subtract', async (req, res) => {
+  const subtractProduct = await Product.findByPk(req.params.id)
+  const oldQuantity = subtractProduct.quantity
+  const dbResponse = await Product.update({
+    quantity: oldQuantity - 1
+  },
+  {
+    where: {
+      id: req.params.id
+    }
+  })
+  res.json(dbResponse);
+})
+
 router.get("/", async (req, res) => {
   try {
     res.send("it is working");

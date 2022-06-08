@@ -45,6 +45,7 @@ const specificSearch = document.querySelector('#specificSearch').value.trim();
     .value.trim();
   window.location.href = `/inventory/${product_artist}/${specificSearch}`;
   console.log(product_artist);
+  
 };
 
 document
