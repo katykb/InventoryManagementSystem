@@ -73,6 +73,7 @@ router.get("/inventory/name/:product_name", async (req, res) => {
     return product.get({ plain: true });
   });
   console.log(matchingProducts);
+  console.log(product_name)
   res.render("showProducts", { matchingProducts });
 });
 
