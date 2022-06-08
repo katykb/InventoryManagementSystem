@@ -15,7 +15,7 @@ const inventoryFormHandler = async (event) => {
     .querySelector("#retailPrice-inventory")
     .value.trim();
   const in_stock = document.querySelector("#inStock-inventory").value.trim();
-  const quantity = document.querySelector("#quantity-inventory").value.trim();
+  const quantity = parseInt(document.querySelector("#quantity-inventory").value.trim());
   const product_artist = document
     .querySelector("#artist-inventory")
     .value.trim();

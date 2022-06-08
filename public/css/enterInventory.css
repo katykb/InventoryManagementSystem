@@ -1,0 +1,82 @@
+html {
+  overflow: scroll;
+}
+
+body {
+  background: url("../image/enter-inv-background.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#form-container {
+    scroll-snap-stop: y mandatory;
+}
+.enterInv {
+  text-align: center;
+  margin-bottom: 60px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.enterInv h1 {
+  font-size: 70px;
+  color: #04001c;
+  padding: 0px;
+  margin: 0px;
+}
+
+.enterInv p {
+  color: #04001c;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.inventory-entry-form {
+  margin: -30px auto;
+  width: 600px;
+  background: rgb(0, 0, 0, 0.5);
+  padding: 50px;
+  border: 2px solid white;
+  border-radius: 8px;
+  overflow: scroll;
+}
+
+.form-group {
+  margin-top: -18px;
+}
+
+.form-group label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.form-group .form-input {
+  height: 35px;
+  width: 100%;
+  border: 2px solid #96ded1;
+  font-size: 20px;
+  padding: 5px;
+  text-align: center;
+  font-style: italic;
+}
+
+.enter-inv-form-button {
+  margin-top: 40px;
+  text-align: center;
+}
+
+button {
+  font-size: 20px;
+  padding: 10px 40px;
+  background: #96ded1;
+  border: none;
+  color: white;
+}
+
