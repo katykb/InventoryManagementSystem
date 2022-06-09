@@ -33,12 +33,17 @@ router.get("/enterInventory", (req, res) => {
   }
 });
 
-router.get("/checkInventory", (req, res) => {
+router.get("/checkInventory", async (req, res) => {
+  const categoryProducts = await Product.findAll({});
+  const product = categoryProducts.map((product) => {
+    return product.get({ plain: true });
+  });
   console.log("Inventory GET");
   if (req.session.logged_in) {
     console.log(req.session);
     res.render("checkInventory", {
       logged_in: true,
+      product: product,
       username: req.session.username,
     });
   } else {
@@ -99,6 +104,19 @@ router.get("/inventory/artist/:product_artist", async (req, res) => {
   });
   console.log(matchingProducts);
   res.render("showProducts", { matchingProducts });
+});
+
+router.get("/homepage", (req, res) => {
+  console.log("Homepage GET");
+  if (req.session.logged_in) {
+    console.log(req.session);
+    res.render("homepage", {
+      logged_in: true,
+      username: req.session.username,
+    });
+  } else {
+    res.redirect("/");
+  }
 });
 
 router.get("/login", (req, res) => {
