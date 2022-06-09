@@ -86,7 +86,7 @@ body {
 .inventory-entry-form {
   margin: -30px auto;
   width: 1000px;
-  background: rgb(0, 0, 0, 0.7);
+  background: rgb(0, 0, 0, 0.5);
   padding: 50px;
   border: 2px solid white;
   border-radius: 8px;
