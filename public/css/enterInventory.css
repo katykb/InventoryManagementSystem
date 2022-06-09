@@ -13,6 +13,8 @@ body {
     } */
 .enterInventoryTitle {
   text-align: center;
+  /* background-color: (255, 255, 255, .5);
+  width: 100%; */
   /* margin-top: 70px;
   background: rgba(255, 255, 255, .5);
   padding: 15px; */
