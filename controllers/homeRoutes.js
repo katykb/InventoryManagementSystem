@@ -50,7 +50,7 @@ router.get("/subtractInventory", (req, res) => {
   console.log("Inventory GET");
   if (req.session.logged_in) {
     console.log(req.session);
-    console.log(product_artist, product_name);
+    //console.log(product_artist, product_name, quantity);
     res.render("subtractInventory", {
       logged_in: true,
       username: req.session.username,

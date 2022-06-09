@@ -47,40 +47,12 @@ document
   .querySelector(".inventory-entry-form")
   .addEventListener("submit", inventoryFormHandler);
 
-const alertHandler = async (event) => {
-  event.preventDefault();
-  console.log(alertHandler);
-  const myAlert = document.querySelector("#myAlert");
-  myAlert.addEventListener("close.bs.alert", (event) => {});
-  const alertClose = document.querySelector("#linkClose");
-
-  document.querySelector("#alertClose").addEventListener("submit", alertClose);
-};
-
-const subtractFormHandler = async (event) => {
-  event.preventDefault();
-
-  const product_name = document.querySelector("#title-inventory").value.trim();
-  const product_artist = document
-    .querySelector("#artist-inventory")
-    .value.trim();
-
-  const response = await fetch("/api/inventory", {
-    method: "PUT",
-    body: JSON.stringify({
-      product_name,
-      product_artist,
-    }),
-    headers: { "Content-Type": "application/json" },
-  });
-
-  if (response.ok) {
-    document.location.replace("/enterInventory");
-  } else {
-    alert("Failed to subtract inventory");
-  }
-};
-
-document
-  .querySelector(".inventory-subtract-form")
-  .addEventListener("submit", subtractFormHandler);
+  const alertHandler = async (event) => {
+    event.preventDefault();
+    console.log(alertHandler);
+    const myAlert = document.querySelector("#myAlert");
+    myAlert.addEventListener("close.bs.alert", (event) => {});
+    const alertClose = document.querySelector("#linkClose");
+  
+    //document.querySelector("#alertClose").addEventListener("submit", alertClose);
+  };
