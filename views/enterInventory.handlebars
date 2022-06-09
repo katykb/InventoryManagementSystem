@@ -22,13 +22,13 @@
 
 
   <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
-    <div class="container"><a class="navbar-brand" href="#">Brand</a><button data-bs-toggle="collapse"
+    <div class="container"><a class="navbar-brand" href="/homepage">Home</a><button data-bs-toggle="collapse"
         class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i
           class="fa fa-bars"></i></button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item nav-link"><a class="nav-link active" href="#about">About</a></li>
+          {{!-- <li class="nav-item nav-link"><a class="nav-link active" href="#about">About</a></li> --}}
           <li class="nav-item nav-link"></li>
           <li class="nav-item nav-link">
             <button class="btn" id="logout">logout</button>
@@ -41,6 +41,41 @@
     <div class="enterInventoryTitle">
       <p>Update Inventory Form</p>
     </div>
+    
+<div class="alert alert-success collapse" id ="myAlert" role="alert">
+  <a id="linkClose" href="#" class="close">&times;</a>
+  <h4 class="alert-heading">Well done!</h4>
+  <p>Your item has been added into inventory</p>
+  <hr>
+  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+</div>
+
+
+{{!-- <form class="form inventory-subtract-form">
+
+  <div class="form-group">
+    <label for="title" id="c3">Product Name:</label>
+    <input class="form-input" type="text" id="title-inventory" />
+  </div>
+  <div class="form-group" id="c4">
+    <label for="artist">Product Artist:</label>
+    <input class="form-input" type="text" id="artist-inventory" />
+  </div>
+  <div class="form-group" id="c7">
+          <label for="quantity">Quantity:</label>
+          <input class="form-input" type="text" id="quantity-inventory" />
+        </div>
+
+  <div>
+    <button
+      class="btn btn-primary subtract-inv-form-button"
+      type="submit"
+    >Subract Item from Inventory</button>
+  </div>
+</form> --}}
+    {{!-- <a href="/subtractInventory"><button class="btn btn-primary" type="submit" id="subtract-inventory-button">Subract an Item</button></a>
+     --}}
+{{!-- </body> --}}
 
       <form class="form inventory-entry-form">
 
@@ -87,7 +122,7 @@
         <div id="inventory-buttons"></div>
 
           <button class="btn btn-primary" id="submit1">Enter New Product</button>
-          <a href="/subtractInventory"><button class="btn btn-primary" id="submit2">Subract Product</button></a>
+          {{!-- <a href="/subtractInventory"><button class="btn btn-primary" id="submit2">Subract Product</button></a> --}}
       </div>
       </form>
     </div>

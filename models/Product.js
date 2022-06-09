@@ -24,7 +24,7 @@ Product.init(
     product_name: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true
+      unique: true,
     },
 
     product_artist: {
@@ -39,11 +39,6 @@ Product.init(
     wholesale_price: {
       type: DataTypes.DECIMAL,
       allowNull: false,
-    },
-
-    in_stock: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true,
     },
 
     quantity: {
