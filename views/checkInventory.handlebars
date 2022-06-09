@@ -41,9 +41,9 @@
     <div class="enterInventoryTitle">
       <p>Check Inventory<p>
     </div>
->
-  <div class="row">
-    <div class="col">
+<div class="searchInventoryForm">
+  {{!-- <div class="row"> --}}
+    <div class="form-one">
    <form class="media-form-group">
   <label for="check-levels">Select Media Type:</label>
   <select class="form-input" id="mediaType-inventory-levels">
@@ -58,7 +58,7 @@
   
 </form>
     </div>
-    <div class="col">
+    <div class="form-one">
       <form class="genre-form-group">
   <label for="check-levles"> Select Genre Type:</label>
   <select class="form-input" id="genreType-inventory-levels">
@@ -75,7 +75,7 @@
   </div>
 </form>
     </div>
-    <div class="col">
+    <div class="form-one">
       <form class="specific-form-group">  <label for="check-levles"> Select Genre Type:></label>  
       <select class="form-input" id="specificType-inventory-levels">    
           <option value="artist">Artist</option>    
@@ -85,6 +85,7 @@
         <div>    
       <button class="btn btn-primary" type="submit">Search by Artist or Title</button>  </div></form>
     </div>
+  {{!-- </div> --}}
   </div>
 
         
