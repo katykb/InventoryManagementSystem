@@ -6,19 +6,19 @@ const { Category } = require('../models');
 const categoryData = [
 {
 
-    genre_type : 'Classic Rock'
+    name : 'Classic Rock'
 }, 
 {
-    genre_type : 'Pop'
+    name : 'Pop'
 }, 
 {
-    genre_type : 'Rock'
+    name  : 'Rock'
 },
 {
-    genre_type : 'Country'
+    name  : 'Country'
 }, 
 {
-    genre_type : 'Rap'
+    name  : 'Rap'
 }
 ];
 

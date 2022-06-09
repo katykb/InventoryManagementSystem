@@ -131,16 +131,21 @@ div#sidebar{
   top:96px;
 }
 
-.col{
-flex: 1 0 0%;
-    position: absolute;
-    left: 294px;
-    top: 110px;
-    background: white;
+.col {
+  flex: 1 0 0%;
+  position: absolute;
+  left: 294px;
+  top: 20px;
+  background: white;
+  width: 1587px;
 }
 
 button.btn.btn-primary {
-  position: absolute;
+  /* position: absolute;
   left: 27px;
-  bottom: 410px;
+  bottom: 410px; */
+}
+
+label{
+  color:black;
 }

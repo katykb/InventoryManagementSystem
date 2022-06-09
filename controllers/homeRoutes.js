@@ -33,23 +33,17 @@ router.get("/enterInventory", (req, res) => {
   }
 });
 
-
-router.get('/inventory/:category_id', async (req, res) => {
-  const category_id = req.params.category_id;
-  const categoryProducts = await Product.findAll({ where: { category_id } })
-  const matchingProducts = categoryProducts.map(product => {
-    return product.get({ plain: true })
-  })
-  console.log(matchingProducts);
-  res.render("showProducts", { matchingProducts })
-})
-
-router.get("/checkInventory", (req, res) => {
+router.get("/checkInventory", async(req, res) => {
+  const categoryProducts = await Product.findAll({});
+  const product = categoryProducts.map((product) => {
+    return product.get({ plain: true });
+  });
   console.log("Inventory GET");
   if (req.session.logged_in) {
     console.log(req.session);
     res.render("checkInventory", {
       logged_in: true,
+      product: product,
       username: req.session.username,
     });
   } else {
@@ -67,6 +61,36 @@ router.get("/inventory/genre/:category_id", async (req, res) => {
   res.render("showProducts", { matchingProducts });
 });
 
+router.get("/inventory/media/:media_type", async (req, res) => {
+  const media_type = req.params.media_type;
+  const mediaProducts = await Product.findAll({ where: { media_type } });
+  const matchingProducts = mediaProducts.map((product) => {
+    return product.get({ plain: true });
+  });
+  console.log(matchingProducts);
+  res.render("showProducts", { matchingProducts });
+});
+
+router.get("/inventory/name/:product_name", async (req, res) => {
+  const product_name = req.params.product_name;
+  const titleProducts = await Product.findAll({ where: { product_name } });
+  const matchingProducts = titleProducts.map((product) => {
+    return product.get({ plain: true });
+  });
+  console.log(matchingProducts);
+  res.render("showProducts", { matchingProducts });
+});
+
+router.get("/inventory/artist/:product_artist", async (req, res) => {
+  const product_artist = req.params.product_artist;
+  const artistProducts = await Product.findAll({ where: { product_artist } });
+  const matchingProducts = artistProducts.map((product) => {
+    return product.get({ plain: true });
+  });
+  console.log(matchingProducts);
+  res.render("showProducts", { matchingProducts });
+});
+
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/");
@@ -74,6 +98,13 @@ router.get("/login", (req, res) => {
   }
 
   res.render("login");
+});
+
+router.get("/register", (req, res) => {
+  if (!req.session.logged_in) {
+    res.redirect("/login");
+  }
+  res.render("registerEmployee");
 });
 
 module.exports = router;
