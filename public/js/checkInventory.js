@@ -22,6 +22,7 @@ const genreFormHandler = async (event) => {
 
 const mediaFormHandler = async (event) => {
   event.preventDefault();
+  console.log(event);
 
   const media_type = document
     .querySelector("#mediaType-inventory-levels")
@@ -56,6 +57,8 @@ document
   .querySelector(".media-form-group")
   .addEventListener("submit", mediaFormHandler);
 
+
 document
   .querySelector(".specific-form-group")
   .addEventListener("submit", specificFormHandler);
+
