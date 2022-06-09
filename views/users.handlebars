@@ -3,48 +3,16 @@
   100%; } td, th { border: 1px solid #dddddd; text-align: left; padding: 8px; }
   tr:nth-child(even) { background-color: #dddddd; }
 </style>
+
 <div>
-  <h1>User List </h1>
+  <h1>All Registered Employees </h1>
 
-  <table>
-    <tr>
-      <th>ID</th>
-      <th>Username</th>
-      <th>Created</th>
-    </tr>
-    <tr>
-    {{#each users}}
+  {{#each users}}
+    <ul>
+      <li>ID: {{id}}</li>
+      <li>Username: {{username}}</li>
+      <li>Created: {{createdAt}}</li>
+    </ul>
+  {{/each}}
 
-      
-        <td>{{id}}</td>
-
-      
-     
-
-    {{/each}}
-    </tr>
-    <tr>
-    {{#each users}}
-
-     
-      
-        <td>{{username}}</td>
-
-      
-      
-
-    {{/each}}
-    </tr>
-    <tr>
-    {{#each users}}
-
-     
-     
-        <td>{{createdAt}}</td>
-
-      
-
-    {{/each}}
-    </tr>
-  </table>
 </div>
