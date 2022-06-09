@@ -1,3 +1,10 @@
+  <script>
+  function showAlert() {
+    var myText = "You have registered a new employee!";
+    alert (myText);
+  }
+  </script>
+
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" href="/css/register.css" />
@@ -51,11 +58,9 @@
       <label for="restrictions-signup">Restrictions:</label>
       <input class="form-input" type="text" id="restrictions-signup" />
     </div>
-      <button class="btn btn-primary" id="submit">Register</button>
-
-    
+      <button onclick="showAlert()" class="btn btn-primary" id="submit">Register</button>
   </form>
-  
+
 </div>
 </div>
 
