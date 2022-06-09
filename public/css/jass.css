@@ -5,10 +5,10 @@ body {
 
 }
 
-/* .loginTitle {
-    btn
+.loginTitle {
+    width: 100%;
     
-} */
+}
 
 .loginTitle p {
     color: #04001c;
