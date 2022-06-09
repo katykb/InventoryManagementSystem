@@ -78,6 +78,7 @@ router.get("/inventory/name/:product_name", async (req, res) => {
     return product.get({ plain: true });
   });
   console.log(matchingProducts);
+  console.log(product_name)
   res.render("showProducts", { matchingProducts });
 });
 
@@ -107,6 +108,16 @@ router.get("/register", (req, res) => {
   res.render("registerEmployee");
 });
 
+
+router.get("/users", async (req, res) => {
+  const db_users = await User.findAll({});
+
+  const users = db_users.map(user => user.get({plain: true}))
+
+  console.log(users);
+
+  res.render("users", {users})
+})
 module.exports = router;
 
 // router.get('/inventory/:product_name', async (req, res) => {

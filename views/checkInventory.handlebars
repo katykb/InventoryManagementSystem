@@ -44,11 +44,12 @@
             <form class="genre-form-group">
   <label for="check-levles"> Select Genre Type:></label>
   <select class="form-input" id="genreType-inventory-levels">
-    <option value="2"> Rap</option>
-    <option value="4">Country</option>
-    <option value="3">Rock</option>
     <option value="1">Classic Rock</option>
-    <option value="5">Alternative</option>
+    <option value="2">Pop</option>
+    <option value="3">Rock</option>
+    <option value="4">Country</option>
+    <option value="5"> Rap</option>
+    <option value="6">Alternative</option>
   </select>
 
   <div>
@@ -75,17 +76,23 @@
                         <div class="reflow-product-list">
                             <div class="ref-products">
                                 {{#each product}}
-                                <div class="ref-product"><img class="ref-image" src="https://cdn.bootstrapstudio.io/products/product-30_md.jpg" loading="lazy">
+                                <div class="ref-product">
                                     <div class="ref-product-data">
                                         <div class="ref-product-info">
-                                            <h5 class="ref-name">Album Title: {{product_name}}</h5>
-                                            <p class="ref-excerpt"><h3>Wholesale Price: {{wholesale_price}}</h3></p>
+                                            <h1 class="ref-name">Album Title: {{product_name}}</h5>
+                                            <p class="ref-excerpt"><h5>Artist: {{product_artist}}</h5></p>
+                                            <p class="ref-price"><h5>Retail Price: {{retail_price}}</h5></p>
+                                        <h5>Wholesale Price: {{wholesale_price}}</h3>
+                                        <p class="ref-price"><h5>Retail Price: {{retail_price}}</h5></p>
+                <h5>In Stock: {{in_stock}}</h3>
+                <h5>Quantity: {{quantity}}</h3>
+                <h5>Genre: {{category_id}}</h4>
                                         </div>
-                                        <p class="ref-price"><h3>Retail Price: {{retail_price}}</h3></p>
-                                        <h3>Artist: {{product_artist}}</h3>
-                <h3>In Stock: {{in_stock}}</h3>
-                <h3>Quantity: {{quantity}}</h3>
-                <h4>Genre: {{category_id}}</h4>
+                                        
+                                        {{!-- <h4>Wholesale Price: {{wholesale_price}}</h3>
+                <h4>In Stock: {{in_stock}}</h3>
+                <h4>Quantity: {{quantity}}</h3>
+                <h4>Genre: {{category_id}}</h4> --}}
                                     </div>
                                 </div>
                                 {{/each}}

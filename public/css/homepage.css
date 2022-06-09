@@ -133,11 +133,11 @@ div#sidebar{
 
 .col {
   flex: 1 0 0%;
-  position: absolute;
-  left: 294px;
-  top: 20px;
-  background: white;
-  width: 1587px;
+    position: absolute;
+    left: 294px;
+    top: 20px;
+    background: white;
+    width: 2204px
 }
 
 button.btn.btn-primary {

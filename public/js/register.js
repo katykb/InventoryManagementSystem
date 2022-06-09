@@ -3,7 +3,7 @@ const signupFormHandler = async (event) => {
 
   const employeeName = document.querySelector("#name-signup").value.trim();
   const newUsername = document.querySelector("#username-signup").value.trim();
-  const newPassword = documen.querySelector("#password-signup").value.trim();
+  const newPassword = document.querySelector("#password-signup").value.trim();
   const restrictions = document
     .querySelector("#restrictions-signup")
     .value.trim();
@@ -12,14 +12,14 @@ const signupFormHandler = async (event) => {
     const response = await fetch("/api/users/", {
       method: "POST",
       body: JSON.stringify({
-        newUsername,
-        newPassword,
+        username: newUsername,
+        password: newPassword,
       }),
       headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace('/');
     } else {
       alert("failed to sign up");
     }
@@ -27,5 +27,7 @@ const signupFormHandler = async (event) => {
 };
 
 document
-  .querySelector(".signup-form")
-  .addEventListener("submit", signupFormHandler);
+.querySelector(".signup-form")
+.addEventListener("submit", signupFormHandler);
+
+  
