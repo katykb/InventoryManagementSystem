@@ -47,12 +47,12 @@ document
   .querySelector(".inventory-entry-form")
   .addEventListener("submit", inventoryFormHandler);
 
-  const alertHandler = async (event) => {
-    event.preventDefault();
-    console.log(alertHandler);
-    const myAlert = document.querySelector("#myAlert");
-    myAlert.addEventListener("close.bs.alert", (event) => {});
-    const alertClose = document.querySelector("#linkClose");
+  // // const alertHandler = async (event) => {
+  // //   event.preventDefault();
+  // //   console.log(alertHandler);
+  // //   const myAlert = document.querySelector("#myAlert");
+  // //   myAlert.addEventListener("close.bs.alert", (event) => {});
+  // //   const alertClose = document.querySelector("#linkClose");
   
-    //document.querySelector("#alertClose").addEventListener("submit", alertClose);
-  };
+  //   //document.querySelector("#alertClose").addEventListener("submit", alertClose);
+  // };
