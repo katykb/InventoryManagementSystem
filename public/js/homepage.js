@@ -24,6 +24,25 @@ const homepageDashboard = async (event) => {
   }
 };
 
+const homeButton = async (event) => {
+  event.preventDefault();
+
+  const returnHomeButton = document.querySelector(".navbar-home").value.trim();
+  if (returnHomeButton) {
+    window.location.href = `/api/homepage`;
+    // const response = await fetch("/api/homepage", {
+    //   method: "GET",
+    //   body: JSON.stringify({ username, password }),
+    //   headers: { "Content-typ": "application/json" },
+    // });
+    // if (response.ok) {
+    //   document.location.replace("/");
+    // } else {
+    //   alert("Failed to log in");
+    // }
+  }
+};
+
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
@@ -54,6 +73,9 @@ const signupFormHandler = async (event) => {
   }
 };
 
+document
+  .querySelector(".navbar-home.")
+  .addEventListener("button", returnHomeButton);
 document
   .querySelector(".login-form")
   .addEventListener("submit", loginFormHandler);
