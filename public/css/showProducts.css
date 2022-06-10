@@ -32,10 +32,13 @@ body {
 
 div.reflow-product-list {
     margin-left: 350px;
+    position: absolute;
+    margin-left: 75px;
+    z-index: 99;
 }
 
 .reflow-product-list {
-    width: 1500px;
+    width: 2000px;
     background: rgb(0, 0, 0, 0.7);
     padding: 50px;
     border: 2px solid white;
@@ -44,6 +47,10 @@ div.reflow-product-list {
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 50px;
+    font-size: 20px;
+    margin-right: 50px;
+    position: relative;
+    
     
 }
 
